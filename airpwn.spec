@@ -52,9 +52,3 @@ rm -rf %{buildroot}
 %{_sbindir}/*
 %{_datadir}/airpwn
 
-
-* Sun Jun 25 2006 Stefan van der Eijk <stefan@eijk.nu> 1.10-2
-- fix summary
-
-* Tue Nov 16 2004 Stefan van der Eijk <stefan@mandrake.org> 0.50c-1mdk
-- initial package
