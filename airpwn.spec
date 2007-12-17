@@ -14,7 +14,6 @@ BuildRequires:	libpcap-devel
 BuildRequires:	lorcon-devel
 BuildRequires:	net-devel
 BuildRequires:	pcre-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Airpwn is a generic packet injection tool for wireless networks.
