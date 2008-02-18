@@ -1,6 +1,6 @@
 %define	name	airpwn
-%define version	1.10
-%define	release	%mkrel 4
+%define version	1.3
+%define	release	%mkrel 1
 
 Summary:	Generic packet injection tool for wireless networks
 Name:		%{name}
@@ -9,7 +9,8 @@ Release:	%{release}
 License:	GPL
 Group:		Networking/Other
 URL:		http://sf.net/projects/%{name}
-Source:		%{name}-%{version}.tar.bz2
+Source:		%{name}-%{version}.tgz
+Patch:		airpwn-1.3-use-wireless-tools-header.patch
 BuildRequires:	libpcap-devel
 BuildRequires:	lorcon-devel
 BuildRequires:	net-devel
@@ -21,9 +22,10 @@ Airpwn is a generic packet injection tool for wireless networks.
 
 %prep
 %setup -q
-#%patch0 -p1 -b .dyn
+%patch -p1 -b .use-wireless-tools-header
 
 %build
+%configure
 %make
 
 %install
