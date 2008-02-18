@@ -12,6 +12,7 @@ Group:		Networking/Other
 URL:		http://sf.net/projects/%{name}
 Source:		%{name}-%{version}.tgz
 Patch:		airpwn-1.3-use-wireless-tools-header.patch
+BuildRequires:	libiw-devel
 BuildRequires:	libpcap-devel
 BuildRequires:	lorcon-devel
 BuildRequires:	net-devel
