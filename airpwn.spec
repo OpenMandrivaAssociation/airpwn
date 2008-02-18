@@ -2,7 +2,7 @@
 %define version	1.10
 %define	release	%mkrel 3
 
-Summary:	Airpwn is a generic packet injection tool for wireless networks
+Summary:	Generic packet injection tool for wireless networks
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
