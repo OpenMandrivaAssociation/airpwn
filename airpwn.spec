@@ -11,7 +11,7 @@ License:	GPL
 Group:		Networking/Other
 URL:		http://sf.net/projects/%{name}
 Source:		%{name}-%{version}.tgz
-Patch:		airpwn-1.3-use-wireless-tools-header.patch
+Patch:		airpwn-1.3-wireless.h-build-fix.patch
 BuildRequires:	libiw-devel
 BuildRequires:	libpcap-devel
 BuildRequires:	lorcon-devel
@@ -25,7 +25,7 @@ Airpwn is a generic packet injection tool for wireless networks.
 
 %prep
 %setup -q
-%patch -p1 -b .use-wireless-tools-header
+%patch -p1 -b .wireless.h-build-fix
 
 %build
 %configure
@@ -33,18 +33,11 @@ Airpwn is a generic packet injection tool for wireless networks.
 
 %install
 rm -rf %{buildroot}
-mkdir -p \
-	%{buildroot}%{_bindir} \
-	%{buildroot}%{_mandir}/man1 \
-	%{buildroot}%{_sbindir} \
-	%{buildroot}%{_datadir}/%{name}
-
-install -m 644 airpwn.1 %{buildroot}%{_mandir}/man1/
-install -s airpwn %{buildroot}%{_sbindir}
-install -s atheros_prep.sh %{buildroot}%{_bindir}
-install -s conf/* %{buildroot}%{_datadir}/%{name}
-
-rm %{buildroot}%{_datadir}/%{name}/README
+make DESTDIR=%{buildroot} install
+mkdir -p %{buildroot}%{_bindir}
+mkdir -p %{buildroot}%{_datadir}/%{name}
+install -m 755 atheros_prep.sh %{buildroot}%{_bindir}
+install -m 644 conf/* %{buildroot}%{_datadir}/%{name}
 
 %clean
 rm -rf %{buildroot}
