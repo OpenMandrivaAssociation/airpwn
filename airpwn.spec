@@ -4,6 +4,7 @@
 
 Summary:	Generic packet injection tool for wireless networks
 Name:		%{name}
+Epoch:		1
 Version:	%{version}
 Release:	%{release}
 License:	GPL
