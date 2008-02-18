@@ -15,6 +15,7 @@ Patch:		airpwn-1.3-use-wireless-tools-header.patch
 BuildRequires:	libpcap-devel
 BuildRequires:	lorcon-devel
 BuildRequires:	net-devel
+BuildRequires:	openssl-devel
 BuildRequires:	pcre-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
