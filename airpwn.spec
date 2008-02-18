@@ -1,6 +1,6 @@
 %define	name	airpwn
 %define version	1.10
-%define	release	%mkrel 3
+%define	release	%mkrel 4
 
 Summary:	Generic packet injection tool for wireless networks
 Name:		%{name}
