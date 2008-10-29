@@ -1,12 +1,8 @@
-%define	name	airpwn
-%define version	1.3
-%define	release	%mkrel 3
-
 Summary:	Generic packet injection tool for wireless networks
-Name:		%{name}
+Name:		airpwn
 Epoch:		1
-Version:	%{version}
-Release:	%{release}
+Version:	1.3
+Release:	%mkrel 4
 License:	GPL
 Group:		Networking/Other
 URL:		http://sf.net/projects/%{name}
