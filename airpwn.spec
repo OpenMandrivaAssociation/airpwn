@@ -2,7 +2,7 @@ Summary:	Generic packet injection tool for wireless networks
 Name:		airpwn
 Epoch:		1
 Version:	1.3
-Release:	%mkrel 4
+Release:	%mkrel 5
 License:	GPL
 Group:		Networking/Other
 URL:		http://sf.net/projects/airpwn
@@ -10,7 +10,7 @@ Source0:	%{name}-%{version}.tgz
 BuildRequires:	libiw-devel
 BuildRequires:	libpcap-devel
 BuildRequires:	lorcon-devel
-BuildRequires:	libnet1.1.2-devel
+BuildRequires:	net-devel >= 1.1.3
 BuildRequires:	openssl-devel
 BuildRequires:	pcre-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
