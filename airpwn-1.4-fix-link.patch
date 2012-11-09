@@ -1,0 +1,11 @@
+--- configure.ac.link	2010-04-21 11:46:00.000000000 +0200
++++ configure.ac	2010-04-21 11:46:48.000000000 +0200
+@@ -13,7 +13,7 @@
+ AC_CHECK_LIB(pcre, pcre_compile, [], AC_MSG_ERROR(libpcre required))
+ AC_CHECK_LIB(pthread, pthread_create, [], AC_MSG_ERROR(libpthread required))
+ AC_CHECK_LIB(orcon, tx80211_txpacket, [], AC_MSG_ERROR(LORCON required. Install LORCON before building airpwn.))
+-AC_CHECK_LIB(ssl, MD5_Init, [], AC_MSG_NOTICE(openssl required for full WEP key generation))
++AC_CHECK_LIB(crypto, MD5_Init, [LIBS="$LIBS -lcrypto"], AC_MSG_NOTICE(openssl required for full WEP key generation))
+ AC_CHECK_LIB(python2.4, PyString_FromString, [], AC_MSG_NOTICE(Python2.4 required))
+ 
+ # Checks for header files.
