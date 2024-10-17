@@ -5,7 +5,7 @@ Version:	1.4
 Release:	%mkrel 4
 License:	GPLv2+
 Group:		Networking/Other
-URL:		http://sf.net/projects/airpwn
+URL:		https://sf.net/projects/airpwn
 Source0:	%{name}-%{version}.tgz
 Patch0:		airpwn-1.4-fix-link.patch
 BuildRequires:	libiw-devel
