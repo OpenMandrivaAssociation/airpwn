@@ -8,6 +8,11 @@ Group:		Networking/Other
 URL:		https://sf.net/projects/airpwn
 Source0:	%{name}-%{version}.tgz
 Patch0:		airpwn-1.4-fix-link.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	libiw-devel
 BuildRequires:	libpcap-devel
 BuildRequires:	lorcon-devel
