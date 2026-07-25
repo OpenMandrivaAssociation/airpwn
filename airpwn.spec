@@ -2,7 +2,7 @@ Summary:	Generic packet injection tool for wireless networks
 Name:		airpwn
 Epoch:		1
 Version:	1.4
-Release:	%mkrel 4
+Release:	5
 License:	GPLv2+
 Group:		Networking/Other
 URL:		https://sf.net/projects/airpwn
